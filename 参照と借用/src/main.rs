@@ -19,6 +19,7 @@ fn main() {
     let v = vec![1, 2, 3];
     for i in &v {
         println!("{}", i);
+        // vは借用されているのでここでvの変更はできない
     }
 }
 
