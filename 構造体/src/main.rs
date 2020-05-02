@@ -21,7 +21,7 @@ fn main() {
     point = Point3d { y: 1, .. point }; // 値の一部を他の構造体からコピーできる
     println!("{}, {}, {}", point.x, point.y, point.z);
 
-    struct Inches(i32);
+    struct Inches(i32); // タプル構造体が1つの値だけの場合、他の要素と区別できるメリットがある（Swiftのaliasのようなイメージか？）
     let length = Inches(10);
     let Inches(integer_length) = length;
     println!("length is {} inches", integer_length);
